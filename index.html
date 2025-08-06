@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Marlon Edepcion Portfolio</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: iPortfolio
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+  * Updated: Jun 29 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header dark-background d-flex flex-column">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <div class="profile-img">
+      <img src="assets/img/Marlon.png" alt="" class="img-fluid rounded-circle">
+    </div>
+
+    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+      <!-- Uncomment the line below if you also wish to use an image logo -->
+      <!-- <img src="assets/img/logo.png" alt=""> -->
+      <h1 class="sitename">Marlon Edepcion</h1>
+    </a>
+
+    <div class="social-links text-center">
+      <li style="font-size:15px";>Contact No.: 09271179410</li>
+      <li style="font-size:15px";>Email: edepcion.marlon@gmail.com</li>
+      <li style="font-size:15px";>Website: https://maredep.github.io/edepcion/</li>
+      
+    </div>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
+        <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
+        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
+        <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>        
+      </ul>
+    </nav>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+      <img id="hero-image" src="assets/img/electronics.jpg" alt="" data-aos="fade-in">
+      <div class="container">
+        <h2 id="hero-title">Marlon Edepcion</h2>
+        <p><span id="typed-role"></span></p>
+      </div>
+    </section><!-- /Hero Section -->
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+      const stringsArray = ["Electronics Engineer", "Developer", "Analyst"];
+
+      const heroImage = document.getElementById("hero-image");
+
+      const heroText = document.getElementById("typed-role");
+
+      const heroName = document.getElementById("hero-title");
+
+      function getImageSrc(name) {
+        switch (name) {
+          case "Electronics Engineer":
+            return "assets/img/electronics.jpg";
+          case "Developer":
+            return "assets/img/developer.jpg";
+          case "Analyst":
+            return "assets/img/report.jpg";
+          default:
+            return "assets/img/engineer.jpg";
+        }
+      }
+
+      function getTextColor(name) {
+        switch (name) {
+          case "Electronics Engineer":
+            return "#FFD700"; // gold
+          case "Developer":
+            return "#00BFFF"; // deep sky blue
+          case "Analyst":
+            return "#222222"; // dark grey
+          default:
+            return "#FFFFFF"; // white
+        }
+      }
+
+      const typed = new Typed("#typed-role", {
+        strings: stringsArray,
+        backSpeed: 60,
+        typeSpeed: 60,
+        loop: true,
+        startDelay: 300,
+        backDelay: 2000,
+        onStringTyped: function (index) {
+          const role = stringsArray[index];
+          heroImage.style.opacity = 0;
+          setTimeout(() => {
+            heroImage.src = getImageSrc(role);
+            heroImage.style.opacity = 1;
+            heroText.style.color = getTextColor(role);
+            heroName.style.color = getTextColor(role);
+          }, 300);
+        }
+      });
+    </script>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>About Me</h2>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4 justify-content-center">
+          <div class="col-lg-4">
+            <img src="assets/img/about.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-8 content">
+            <h2>Electronics Engineer</h2>
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>24 May 1986</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span> <a href="https://maredep.github.io/edepcion/">https://maredep.github.io/edepcion/</a> </span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>09271179410</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Bacolod City, Philippines</span></li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>39</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Bachelor</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>edepcion.marlon@gmail.com</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
+                </ul>
+              </div>
+            </div>
+            <p class="py-3">
+              Hi, I’m <strong>Marlon Edepcion</strong>, a passionate Engineer with over <strong>6 years of experience</strong> in the fields of <strong>manufacturing</strong> and <strong>IT services</strong>. Throughout my career, I’ve developed a strong foundation in both hardware and software, allowing me to bridge the gap between engineering and technology-driven innovation.
+
+			My professional interests lie in the exciting intersection of <strong>embedded systems</strong>, <strong> analytics</strong>, and <strong>IT</strong>. I thrive on solving complex technical challenges and creating efficient, scalable solutions—whether it's designing microcontroller-based systems, process improvement or analyzing data to uncover insights.
+
+			I’m always eager to learn and explore new tools and frameworks to stay ahead in this ever-evolving tech landscape. Whether working independently or as part of a team, I bring a problem-solving mindset, attention to detail, and a genuine love for technology to every project I take on.
+
+			Let’s connect and collaborate on something impactful!
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Skills</h2>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row skills-content skills-animation">
+
+          <div class="col-lg-6">
+
+            <div class="progress">
+              <span class="skill"><span>Microsoft Excel</span> <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>SQL</span> <i class="val">80%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>Microsoft Power BI</span> <i class="val">85%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+          </div>
+
+          <div class="col-lg-6">
+
+            <div class="progress">
+              <span class="skill"><span>Six Sigma</span> <i class="val">85%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>Python</span> <i class="val">85%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+            <div class="progress">
+              <span class="skill"><span>Embedded C</span> <i class="val">80%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div><!-- End Skills Item -->
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Skills Section -->
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Resume</h2>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title">Sumary</h3>
+
+            <div class="resume-item pb-0">
+              <h4>Marlon Edepcion</h4>
+              <p><em>An adept Electronics Engineer poised to leverage expertise in data analytics and engineering to enhance company development and achievement.</em></p>
+              <ul>
+                <li>Bacolod City, Negros Occidental</li>
+                <li>09271179410</li>
+                <li>edepcion.marlon@gmail.com</li>
+              </ul>
+            </div><!-- Edn Resume Item -->
+
+            <h3 class="resume-title">Education</h3>
+            <div class="resume-item">
+              <h4>Data Engineering</h4>
+              <h5>2023</h5>
+              <p><em>Development Academy of the Philippines</em></p>
+              <p>Completed hands-on projects involving relational databases and data warehouses using PostgreSQL, data pipelines with SQL and Python, and dashboards in Excel and Power BI, while gaining skills in EDA, feature engineering, and machine learning.</p>
+            </div><!-- Edn Resume Item -->
+
+            <div class="resume-item">
+              <h4>Bachelor of Science in Electronics &amp; Communications Engineering</h4>
+              <h5>2003 - 2008</h5>
+              <p><em>Technological University of the Philippines - Visayas</em></p>
+              <p>Trained in the design, development, and testing of electronic systems and circuits, with hands-on experience in embedded systems, signal processing, and circuit design. Proficient in using tools like MATLAB, Multisim, and microcontroller programming for real-world applications.</p>
+            </div><!-- Edn Resume Item -->
+
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="resume-title">Professional Experience</h3>
+            <div class="resume-item">
+              <h4>Technical Support Representative</h4>
+              <h5>2017 - 2018</h5>
+              <p><em>Sitel Philippines</em></p>
+              <ul>
+                <li>Providing technical support for HP Printer products.</li>
+                <li>Troubleshooting printer connection issues, conducting repairs, and ensuring seamless installations.</li>
+                <li>Conducting sales support for HP Printer products and their accompanying ink cartridges.</li>
+                <li>Adeptly addressing customer concerns while delivering exceptional service and solutions tailored to their needs.</li>
+              </ul>
+            </div><!-- Edn Resume Item -->
+
+            <div class="resume-item">
+              <h4>Engineer</h4>
+              <h5>2010 - 2016</h5>
+              <p><em>Samsung Electronics Philippines Corporation</em></p>
+              <ul>
+                <li>Use daily data from Global Manufacturing database to analyze process and product quality through statistical methodology such as correlation and regression analysis</li>
+                <li>Use process mapping tools like SIPOC, Value Stream Map or Swimlane Diagram to identify process inefficiencies, redundancies and bottlenecks</li>
+                <li>Use data to drive Systemic Root Cause Analysis through FMEA, 5 Whys or Fishbone Diagram. Then create Corrective Action and Improvement</li>
+                <li>Use of Microsoft Applications to report & present Engineering metrics, track performance against Team KPI and Individual Goals & Objectives</li>
+                <li>Ensure metrics are used / responded to in order to optimize processes through MSA and DOE</li>
+                <li>Use of Quality Control tools and Control plans and charts to manage the process</li>
+                <li>Firmware development and analysis of ICT or FCT through debugging with special software tools</li>
+                <li>Six Sigma Practitioner for process improvement and quality management</li>
+                <li>Quality Management System based on ISO 9001</li>
+                <li>SEPHIL Training Coordinator – Use Training Needs Analysis method to Manage Technical/Managerial training related to Engineering, Research and Development</li>
+              </ul>
+            </div><!-- Edn Resume Item -->
+
+            <div class="resume-item">
+              <h4>Service Engineer</h4>
+              <h5>2009 - 2010</h5>
+              <p><em>MedEqual Systems &amp; Supplies Inc</em></p>
+              <ul>
+                <li>Installation, configuration and troubleshooting of network, PACS servers, workstations, scanners and printers as well as medical application software and OS with new released versions and patches</li>
+                <li>Provide 1st level on-site support to end-users in software (Application & OS), hardware and network connectivity</li>
+                <li>Ensures configurations and data backup of services and implement recovery</li>
+                <li>Present product overview, orientation and demonstration to the customer</li>
+                <li>Ensure customers satisfaction throughout the service delivery transaction</li>
+              </ul>
+            </div><!-- Edn Resume Item -->
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Resume Section -->
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Portfolio</h2>
+        <p>This portfolio dashboard showcases my ability to transform raw data into meaningful insights using interactive visualizations. It highlights key performance indicators (KPIs), trends, and patterns that support data-driven decision-making. Designed with clarity and usability in mind, the dashboard demonstrates my skills in data modeling, DAX, and storytelling through Power BI.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+          <!-- <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter="*" class="filter-active">All</li> -->
+            <!-- <li data-filter=".filter-app">Power Bi</li> -->
+            <!-- <li data-filter=".filter-product">Excel</li> -->
+            <!-- <li data-filter=".filter-branding">SQL</li> -->
+          <!-- </ul>End Portfolio Filters --> 
+
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/sales_dashboard_img.png" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Sales Dashboard</h4>
+                  <p>Dynamic sales dashboard visualizing sales trends, customer segments, and performance metrics across regions.</p>
+                  <a href="assets/img/sales_dashboard_img.png" title="Sales Dashboard" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="https://app.powerbi.com/view?r=eyJrIjoiMDE0MmZmNDctY2JlNS00NGY0LTk4OTYtMTg2MWY1N2JmNjBjIiwidCI6ImExZmY5NTIwLTE4ZDAtNDRhMy04NWQ2LWE3YmYxMjQxZTYzZiIsImMiOjEwfQ%3D%3D" title="Power Bi Dashboard" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <!-- <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/product-1.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Product 1</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/portfolio/product-1.jpg" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>End Portfolio Item -->
+
+            <!-- <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/branding-1.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Branding 1</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/portfolio/branding-1.jpg" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>End Portfolio Item -->
+
+            <!-- <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/books-1.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Books 1</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/portfolio/books-1.jpg" title="Branding 1" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+            <!-- <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app"> -->
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/mfg_vmo_cnd_dashboard.png" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Manufacturing Quality Dashboard</h4>
+                  <p>Interactive manufacturing quality dashboard tracking defect rates in real time.
+                    </p>
+                  <a href="assets/img/portfolio/mfg_vmo_cnd_dashboard.png" title="Manufacturing Dashboard" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="https://app.powerbi.com/view?r=eyJrIjoiOWFhOWU3YzktYTZmYS00ZTIyLTk5ZjUtMmJiOTY1OTA1MGEyIiwidCI6ImExZmY5NTIwLTE4ZDAtNDRhMy04NWQ2LWE3YmYxMjQxZTYzZiIsImMiOjEwfQ%3D%3D" title="Manufacturing Dashboard" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <!-- <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/product-2.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Product 2</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/portfolio/product-2.jpg" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>End Portfolio Item -->
+
+            <!-- <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/branding-2.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Branding 2</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/portfolio/branding-2.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>End Portfolio Item -->
+
+            <!-- <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/books-2.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Books 2</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/portfolio/books-2.jpg" title="Branding 2" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/telco_customer_churn_dashboard.png" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Customer Risk Dashboard</h4>
+                  <p>Visualizing key drivers and trends behind customer churn to uncover actionable insights for retention.</p>
+                  <a href="assets/img/portfolio/telco_customer_churn_dashboard.png" title="Telco Customer Churn Dashboard" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="https://app.powerbi.com/view?r=eyJrIjoiOTY5N2QwYzYtMTk5Mi00NTBkLTk4NmItNzAxOTMwNWQ2YTJkIiwidCI6ImExZmY5NTIwLTE4ZDAtNDRhMy04NWQ2LWE3YmYxMjQxZTYzZiIsImMiOjEwfQ%3D%3D" title="Customer Risk Dashboard" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <!-- <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/product-3.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Product 3</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/portfolio/product-3.jpg" title="Product 3" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>End Portfolio Item -->
+
+            <!-- <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/branding-3.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Branding 3</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/portfolio/branding-3.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>End Portfolio Item -->
+
+            <!-- <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/books-3.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Books 3</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/portfolio/books-3.jpg" title="Branding 3" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>End Portfolio Item -->
+
+          </div><!-- End Portfolio Container -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Section -->
+
+  </main>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
